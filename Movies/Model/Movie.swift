@@ -9,16 +9,21 @@
 import Foundation
 import UIKit
 
-class Movie {
-    
-    init(nome: String, descricao: String, imagem: UIImage) {
-        self.nome = nome
-        self.descricao = descricao
-        self.imagem = imagem
-    }
-    
-    var imagem: UIImage
-    var nome: String
-    var descricao: String
-    
+struct Movie : Codable {
+
+    var vote_count: Int
+    var id: Int
+    var video: Bool
+    var vote_average: Double
+    var title: String
+    var popularity: Double
+    var poster_path: String
+    var original_language: String
+    var original_title: String
+    var genre_ids: [Int]
+    var backdrop_path: String
+    var adult: Bool
+    var overview: String
+    var release_date: String
+
 }

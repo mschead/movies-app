@@ -19,7 +19,6 @@ struct RootReducer : Reducer {
         if state == nil {
             return RootState()
         }
-        
         return handleDefaultAction(action: action, state: state)
     }
     
