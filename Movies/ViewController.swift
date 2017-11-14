@@ -12,7 +12,7 @@ import ReSwift
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, StoreSubscriber {
 
     typealias StoreSubscriberStateType = MoviesListingState
-    
+
     @IBOutlet weak var movieTable: UITableView!
 
     let movies = ["Homem Aranha", "Thor", "Matrix", "A Origem"]
@@ -20,18 +20,28 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        mainStore.subscribe(self, selector: { $0.moviesListingState })
+
+        MoviesListingService().getMovies(page:1) { (result) in
+            switch result {
+            case .success(let moviePage):
+                mainStore.dispatch(SetMovieListAction(moviePage.results))
+            case .failure(let error):
+                fatalError("error: \(error.localizedDescription)")
+            }
+        }
+
         movieTable.delegate = self
         movieTable.dataSource = self
+
     }
 
-
-    
     func newState(state: MoviesListingState) {
-        
+        print(state.movies)
     }
-    
+
     // METODOS TABELA: colocar em classe separada
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return movies.count
     }
@@ -55,7 +65,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
         return cell
     }
-    
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

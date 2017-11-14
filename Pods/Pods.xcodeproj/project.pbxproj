@@ -3,14 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		3A5C6FCFAAA188E1F6707A239E3904CD /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDB503BE5646ED6C5B32741E48216AD /* Subscription.swift */; };
 		3EC0F9B407DA9F594758D1340069A470 /* CombinedReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190D08322A08FF5D47998946B1E9AA9C /* CombinedReducer.swift */; };
 		4255EC1FDA96B9D69C3F73F536252EA7 /* TypeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD914CDFFD7428C45D84AFDA2948E507 /* TypeHelper.swift */; };
-		4A40947AB432842CEB3F1A7E3C46B939 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		4C3C4266BDF94A9A34D238CB4440CAAE /* StoreSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D28B7A107327724B056FBDA1F26049F /* StoreSubscriber.swift */; };
 		610B1A6B02C53B26CF4565E0B494DF11 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69047F25A5F93F739F0FB3578EE97C1 /* Store.swift */; };
 		7D7909196660789D37B4A2E099CACE28 /* Pods-Movies-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC26DCE9FFC26D6303136DAE518BDC3 /* Pods-Movies-dummy.m */; };
@@ -18,13 +17,14 @@
 		8D570530825FC323F0DB6499CAD56255 /* Assertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E4D23E238E5794072FDDEB600C8CF9 /* Assertions.swift */; };
 		8F3C5F6B77BDB24AF24AECE1C7ED54AD /* Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6184C8771454EAA3A0A751F175FDD6D1 /* Coding.swift */; };
 		9D1AC8271E1052AE1D1A3E7A766FB65A /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BF48902AD0C66C79B01B1A3AB9EF73 /* State.swift */; };
+		A8459868FBB26C04C80B5FFDEA6DFC43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		B851FFC71AAEC8578A39CADE3BAAF918 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DC19E803868F0371D605E0110A3B0A /* Action.swift */; };
 		B8D9C6E2BE867FE9B142A5AAB03A7C70 /* ReSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A6C8A64001E85BA5CFA46B675C03415A /* ReSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C5CBA0F33B35A57B5420BE38520A406C /* Pods-Movies-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C1937F302CD13AC36FFD0D2DDF400A8 /* Pods-Movies-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C824567FD014D309068406E6C21713C9 /* ReSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B68156A4D33CB2C551F7E6035CE5482 /* ReSwift-dummy.m */; };
 		D2DB38704E249F50A312BB5D06704AA5 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F667800E74AAD1E59D7AC2BFFA8E71DC /* Reducer.swift */; };
+		D615DD54492B8C54A5EFE78361FD28AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		FAFC28BB090AD5E394B15EF09D2AC418 /* Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AE63DEC5F281ED9A60B764C32D99E /* Middleware.swift */; };
-		FB49E4405D477E7ABC4EE1ECE082E9EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,30 +41,30 @@
 		09DC19E803868F0371D605E0110A3B0A /* Action.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Action.swift; path = ReSwift/CoreTypes/Action.swift; sourceTree = "<group>"; };
 		0DB99B2E56B34A9EF892098078F88620 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1342F22C123D8BEB52611AA869CF35BD /* Pods-Movies-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Movies-acknowledgements.markdown"; sourceTree = "<group>"; };
-		13F546FED00B05F9D22AD6BD4AECB335 /* Pods-Movies.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Movies.modulemap"; sourceTree = "<group>"; };
+		13F546FED00B05F9D22AD6BD4AECB335 /* Pods-Movies.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Movies.modulemap"; sourceTree = "<group>"; };
 		190D08322A08FF5D47998946B1E9AA9C /* CombinedReducer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CombinedReducer.swift; path = ReSwift/CoreTypes/CombinedReducer.swift; sourceTree = "<group>"; };
-		1C96D34109384BD0EAEB1635E452703C /* ReSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ReSwift.modulemap; sourceTree = "<group>"; };
+		1C96D34109384BD0EAEB1635E452703C /* ReSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ReSwift.modulemap; sourceTree = "<group>"; };
 		1E7BB0A6E41841C55719BE40DA769EAA /* ReSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ReSwift.xcconfig; sourceTree = "<group>"; };
 		1ED265EB973472629CC81AA74D27EE4B /* Pods-Movies-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Movies-acknowledgements.plist"; sourceTree = "<group>"; };
 		1F7934EC8ABC7EBECAA85B0E33DBA2EB /* Pods-Movies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Movies.release.xcconfig"; sourceTree = "<group>"; };
 		29E4D23E238E5794072FDDEB600C8CF9 /* Assertions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Assertions.swift; path = ReSwift/Utils/Assertions.swift; sourceTree = "<group>"; };
 		2C1937F302CD13AC36FFD0D2DDF400A8 /* Pods-Movies-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Movies-umbrella.h"; sourceTree = "<group>"; };
 		301112EDBD67566F3E5D5309C2A2A086 /* Pods-Movies-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Movies-frameworks.sh"; sourceTree = "<group>"; };
-		4185C678E18B4D73A2400D9E59F93269 /* ReSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4185C678E18B4D73A2400D9E59F93269 /* ReSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ReSwift.framework; path = ReSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B68156A4D33CB2C551F7E6035CE5482 /* ReSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ReSwift-dummy.m"; sourceTree = "<group>"; };
-		4FB0612F354507FB8C4069D66727BA09 /* Pods_Movies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Movies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FB0612F354507FB8C4069D66727BA09 /* Pods_Movies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Movies.framework; path = "Pods-Movies.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FDB503BE5646ED6C5B32741E48216AD /* Subscription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Subscription.swift; path = ReSwift/CoreTypes/Subscription.swift; sourceTree = "<group>"; };
 		6184C8771454EAA3A0A751F175FDD6D1 /* Coding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Coding.swift; path = ReSwift/Utils/Coding.swift; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		68BF48902AD0C66C79B01B1A3AB9EF73 /* State.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = State.swift; path = ReSwift/CoreTypes/State.swift; sourceTree = "<group>"; };
 		6A8A412AE83CA1544B9226377E3F49D3 /* ReSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ReSwift-prefix.pch"; sourceTree = "<group>"; };
 		6D28B7A107327724B056FBDA1F26049F /* StoreSubscriber.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoreSubscriber.swift; path = ReSwift/CoreTypes/StoreSubscriber.swift; sourceTree = "<group>"; };
 		702E4A345180D9700F9C48C6A3C0C331 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FC26DCE9FFC26D6303136DAE518BDC3 /* Pods-Movies-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Movies-dummy.m"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A06135EA336287E3179E9A7E8955A834 /* Pods-Movies-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Movies-resources.sh"; sourceTree = "<group>"; };
 		A6C8A64001E85BA5CFA46B675C03415A /* ReSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ReSwift-umbrella.h"; sourceTree = "<group>"; };
 		C40AE63DEC5F281ED9A60B764C32D99E /* Middleware.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Middleware.swift; path = ReSwift/CoreTypes/Middleware.swift; sourceTree = "<group>"; };
-		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		DD914CDFFD7428C45D84AFDA2948E507 /* TypeHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TypeHelper.swift; path = ReSwift/Utils/TypeHelper.swift; sourceTree = "<group>"; };
 		F1136A23FF7CEB2FB3EF3396836821FD /* StoreType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoreType.swift; path = ReSwift/CoreTypes/StoreType.swift; sourceTree = "<group>"; };
 		F27A19E41D495D65E1C07B3BB573499E /* Pods-Movies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Movies.debug.xcconfig"; sourceTree = "<group>"; };
@@ -77,7 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB49E4405D477E7ABC4EE1ECE082E9EA /* Foundation.framework in Frameworks */,
+				A8459868FBB26C04C80B5FFDEA6DFC43 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,7 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A40947AB432842CEB3F1A7E3C46B939 /* Foundation.framework in Frameworks */,
+				D615DD54492B8C54A5EFE78361FD28AA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,15 +117,8 @@
 				DD914CDFFD7428C45D84AFDA2948E507 /* TypeHelper.swift */,
 				FB4E46EC6DC8818835D5F2C611A645BD /* Support Files */,
 			);
+			name = ReSwift;
 			path = ReSwift;
-			sourceTree = "<group>";
-		};
-		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
-			);
-			name = iOS;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -150,7 +143,7 @@
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -162,6 +155,14 @@
 				4185C678E18B4D73A2400D9E59F93269 /* ReSwift.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		EDC6415EC09C607E5E08EC69E29B6AE4 /* Pods-Movies */ = {
@@ -259,8 +260,8 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0910;
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -321,109 +322,33 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		06DD23E28094D4CB2521437FE3087F36 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F27A19E41D495D65E1C07B3BB573499E /* Pods-Movies.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Movies/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Movies/Pods-Movies.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Movies;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		4C176F97363324F758B1CB4DF69AACAE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E7BB0A6E41841C55719BE40DA769EAA /* ReSwift.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ReSwift/ReSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ReSwift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ReSwift/ReSwift.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = ReSwift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */ = {
+		4E487F173E6C9664F4E9E26B9635D23C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_DEBUG=1",
@@ -445,15 +370,16 @@
 			};
 			name = Debug;
 		};
-		7066653182B41A66D895BDB331B6DC93 /* Release */ = {
+		731EBF90F1885E65B2A8E96DFD1FA4D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1E7BB0A6E41841C55719BE40DA769EAA /* ReSwift.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -466,21 +392,24 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/ReSwift/ReSwift.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = ReSwift;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		7E1106F3548D8C3139B69236510A2BE8 /* Release */ = {
+		8DA50DF7DCEA02F3665E4503D61B434D /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1F7934EC8ABC7EBECAA85B0E33DBA2EB /* Pods-Movies.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -506,6 +435,7 @@
 				PRODUCT_NAME = Pods_Movies;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -513,38 +443,105 @@
 			};
 			name = Release;
 		};
-		B7324857C38B065FEB1EEE3105C2367A /* Release */ = {
+		9720DC92AAD7CB9A75308A1E7F6D9079 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F27A19E41D495D65E1C07B3BB573499E /* Pods-Movies.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Movies/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Movies/Pods-Movies.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Movies;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AB9CF248AA0A19D09DA1712D4735AC2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E7BB0A6E41841C55719BE40DA769EAA /* ReSwift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ReSwift/ReSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ReSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ReSwift/ReSwift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ReSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BDD0139D6EB93FA375F887ABD62DAB2E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_RELEASE=1",
 					"$(inherited)",
@@ -558,7 +555,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -570,8 +566,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */,
-				B7324857C38B065FEB1EEE3105C2367A /* Release */,
+				4E487F173E6C9664F4E9E26B9635D23C /* Debug */,
+				BDD0139D6EB93FA375F887ABD62DAB2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -579,8 +575,8 @@
 		588EB10CA01EA3F42963134D4F8A3E94 /* Build configuration list for PBXNativeTarget "ReSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4C176F97363324F758B1CB4DF69AACAE /* Debug */,
-				7066653182B41A66D895BDB331B6DC93 /* Release */,
+				731EBF90F1885E65B2A8E96DFD1FA4D6 /* Debug */,
+				AB9CF248AA0A19D09DA1712D4735AC2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -588,8 +584,8 @@
 		9482DB36BB4DECCD18E31D49ECC8924F /* Build configuration list for PBXNativeTarget "Pods-Movies" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				06DD23E28094D4CB2521437FE3087F36 /* Debug */,
-				7E1106F3548D8C3139B69236510A2BE8 /* Release */,
+				9720DC92AAD7CB9A75308A1E7F6D9079 /* Debug */,
+				8DA50DF7DCEA02F3665E4503D61B434D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
