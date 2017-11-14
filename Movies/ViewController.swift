@@ -7,15 +7,14 @@
 //
 
 import UIKit
-import ReSwift
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, StoreSubscriber {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     typealias StoreSubscriberStateType = MoviesListingState
     
     @IBOutlet weak var movieTable: UITableView!
 
-    let movies = ["Homem Aranha", "Thor", "Matrix", "A Origem"]
+    let movies = ["Homem Aranha", "Thor", "Matrix", "A Origem", "Homem de Ferro", "Interestellar"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +22,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         movieTable.delegate = self
         movieTable.dataSource = self
     }
-
+    
 
     
     func newState(state: MoviesListingState) {
