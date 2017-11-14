@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -38,75 +39,96 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hXQ-d1-Mg6">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SBj-3M-pUC">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
-                                <color key="backgroundColor" red="0.073088515228426409" green="0.073088515228426409" blue="0.073088515228426409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="movieCell" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="movieCell" rowHeight="100" id="egS-wq-ckw" customClass="MovieTableViewCell" customModule="Movies" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="egS-wq-ckw" id="QTU-GX-029">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thor: Ragnarok" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1Q-Qg-Fxx" userLabel="Nome">
-                                                    <rect key="frame" x="85" y="37.5" width="144.5" height="24"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                    <color key="textColor" red="0.89444120667533489" green="0.92807774132384568" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thor-ragnarok" translatesAutoresizingMaskIntoConstraints="NO" id="muH-4w-Q3U">
-                                                    <rect key="frame" x="15" y="10" width="60" height="79.5"/>
-                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="I1Q-Qg-Fxx" firstAttribute="centerY" secondItem="QTU-GX-029" secondAttribute="centerY" id="2wN-fT-KNg"/>
-                                                <constraint firstItem="muH-4w-Q3U" firstAttribute="top" secondItem="QTU-GX-029" secondAttribute="top" constant="10" id="44t-Hx-mo7"/>
-                                                <constraint firstItem="I1Q-Qg-Fxx" firstAttribute="leading" secondItem="muH-4w-Q3U" secondAttribute="trailing" constant="10" id="gIJ-Ck-JRq"/>
-                                                <constraint firstItem="muH-4w-Q3U" firstAttribute="leading" secondItem="QTU-GX-029" secondAttribute="leading" constant="15" id="h8j-1F-MCZ"/>
-                                                <constraint firstAttribute="trailing" secondItem="muH-4w-Q3U" secondAttribute="trailing" constant="300" id="kQ9-Yt-xbM"/>
-                                                <constraint firstAttribute="bottom" secondItem="muH-4w-Q3U" secondAttribute="bottom" constant="10" id="zPZ-Yd-PMy"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.07659819162436543" green="0.07659819162436543" blue="0.07659819162436543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <connections>
-                                            <outlet property="nome" destination="I1Q-Qg-Fxx" id="2t2-AI-fy8"/>
-                                            <segue destination="wB8-vn-nml" kind="show" id="vFW-EZ-dbx"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
+                                <subviews>
+                                    <searchBar contentMode="redraw" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5km-FV-xd0">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="klc-zU-jS4"/>
+                                        </constraints>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hXQ-d1-Mg6">
+                                        <rect key="frame" x="0.0" y="50" width="375" height="553"/>
+                                        <color key="backgroundColor" red="0.073088515228426409" green="0.073088515228426409" blue="0.073088515228426409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="movieCell" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="movieCell" rowHeight="100" id="egS-wq-ckw" customClass="MovieTableViewCell" customModule="Movies" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="egS-wq-ckw" id="QTU-GX-029">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thor: Ragnarok" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1Q-Qg-Fxx" userLabel="Nome">
+                                                            <rect key="frame" x="85" y="37.5" width="144.5" height="24"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                            <color key="textColor" red="0.89444120667533489" green="0.92807774132384568" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thor-ragnarok" translatesAutoresizingMaskIntoConstraints="NO" id="muH-4w-Q3U">
+                                                            <rect key="frame" x="15" y="10" width="60" height="79.5"/>
+                                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="I1Q-Qg-Fxx" firstAttribute="centerY" secondItem="QTU-GX-029" secondAttribute="centerY" id="2wN-fT-KNg"/>
+                                                        <constraint firstItem="muH-4w-Q3U" firstAttribute="top" secondItem="QTU-GX-029" secondAttribute="top" constant="10" id="44t-Hx-mo7"/>
+                                                        <constraint firstItem="I1Q-Qg-Fxx" firstAttribute="leading" secondItem="muH-4w-Q3U" secondAttribute="trailing" constant="10" id="gIJ-Ck-JRq"/>
+                                                        <constraint firstItem="muH-4w-Q3U" firstAttribute="leading" secondItem="QTU-GX-029" secondAttribute="leading" constant="15" id="h8j-1F-MCZ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="muH-4w-Q3U" secondAttribute="trailing" constant="300" id="kQ9-Yt-xbM"/>
+                                                        <constraint firstAttribute="bottom" secondItem="muH-4w-Q3U" secondAttribute="bottom" constant="10" id="zPZ-Yd-PMy"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" red="0.07659819162436543" green="0.07659819162436543" blue="0.07659819162436543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <outlet property="nome" destination="I1Q-Qg-Fxx" id="2t2-AI-fy8"/>
+                                                    <segue destination="wB8-vn-nml" kind="show" id="vFW-EZ-dbx"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="hXQ-d1-Mg6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="N30-OY-bYB"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hXQ-d1-Mg6" secondAttribute="bottom" id="P7p-pa-kmR"/>
-                            <constraint firstItem="hXQ-d1-Mg6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cpH-ua-Fgu"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hXQ-d1-Mg6" secondAttribute="trailing" id="sKm-n8-WwU"/>
+                            <constraint firstItem="SBj-3M-pUC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Iib-iB-TxG"/>
+                            <constraint firstItem="SBj-3M-pUC" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="U0d-Lc-Gjk"/>
+                            <constraint firstItem="SBj-3M-pUC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cbN-bb-Fdd"/>
+                            <constraint firstItem="SBj-3M-pUC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pQB-c0-2kA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="i3X-4s-faY">
-                        <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="3k3-v4-NwP">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Vrt-hy-Igr">
-                                <rect key="frame" x="313" y="7" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.21021862277834025" green="0.407327796573139" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Filter">
-                                    <color key="titleColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <segue destination="Hb6-a1-rBh" kind="show" id="9Cv-A0-D7W"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" style="plain" id="3k3-v4-NwP">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Vrt-hy-Igr">
+                                    <rect key="frame" x="313" y="7" width="46" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="tintColor" red="0.21021862277834025" green="0.407327796573139" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" title="Filter">
+                                        <color key="titleColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                </button>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="Hb6-a1-rBh" kind="show" id="9Cv-A0-D7W"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="search" id="WSW-Iv-KwG">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="searchButtonClicked:" destination="BYZ-38-t0r" id="Zkd-U1-5vx"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="movieTable" destination="hXQ-d1-Mg6" id="hgl-CB-EXF"/>
+                        <outlet property="searchBar" destination="5km-FV-xd0" id="tjP-uW-Vzb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
