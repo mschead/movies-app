@@ -28,3 +28,36 @@ struct SetMovieListAction : StandardActionConvertible {
     }
 
 }
+
+struct ToggleSearchBarAction: StandardActionConvertible {
+
+    static let type: String = "TOGGLE_SEARCH_BAR_ACTION"
+
+    init() {}
+
+    init(_ standardAction: StandardAction) {
+        self.init(standardAction)
+    }
+
+    func toStandardAction() -> StandardAction {
+        return StandardAction(type: ToggleSearchBarAction.type, payload: [:], isTypedAction: true)
+    }
+}
+
+struct FilterBySearchAction: StandardActionConvertible {
+    static let type: String = "FILTER_BY_SEARCH_ACTION"
+
+    let searchParam: String
+
+    init(searchParam: String) {
+        self.searchParam = searchParam
+    }
+
+    init(_ standardAction: StandardAction) {
+        self.init(standardAction)
+    }
+
+    func toStandardAction() -> StandardAction {
+        return StandardAction(type: FilterBySearchAction.type, payload: [:], isTypedAction: true)
+    }
+}

@@ -9,17 +9,18 @@
 import UIKit
 import ReSwift
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, StoreSubscriber {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, StoreSubscriber, UISearchBarDelegate {
 
     typealias StoreSubscriberStateType = MoviesListingState
 
     @IBOutlet weak var movieTable: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
 
     var movies: [Movie] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         mainStore.subscribe(self, selector: { $0.moviesListingState })
 
         MoviesListingService().getMovies(page:1) { (result) in
@@ -33,11 +34,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
         movieTable.delegate = self
         movieTable.dataSource = self
-
+        searchBar.delegate = self
     }
 
     func newState(state: MoviesListingState) {
-        movies = state.movies
+        searchBar.isHidden = state.isSearchBarHidden
+        movies = state.filteredMovies
         movieTable.reloadData()
     }
 
@@ -71,6 +73,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+    
+    @IBAction func searchButtonClicked(_ sender: UIBarButtonItem) {
+        mainStore.dispatch(ToggleSearchBarAction())
+    }
+
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        mainStore.dispatch(FilterBySearchAction(searchParam: searchBar.text ?? ""))
     }
 }
 

@@ -11,5 +11,8 @@ import Foundation
 struct MoviesListingState {
     
     var movies = [Movie]()
+
+    var filteredMovies = [Movie]()
     
+    var isSearchBarHidden: Bool = true
 }
