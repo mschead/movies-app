@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -55,31 +56,38 @@
                                         <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="movieCell" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="movieCell" rowHeight="100" id="egS-wq-ckw" customClass="MovieTableViewCell" customModule="Movies" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="movieCell" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="movieCell" rowHeight="250" id="egS-wq-ckw" customClass="MovieTableViewCell" customModule="Movies" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="375" height="250"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="egS-wq-ckw" id="QTU-GX-029">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="249.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thor: Ragnarok" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1Q-Qg-Fxx" userLabel="Nome">
-                                                            <rect key="frame" x="85" y="37.5" width="144.5" height="24"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                            <color key="textColor" red="0.89444120667533489" green="0.92807774132384568" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumb-no-image" translatesAutoresizingMaskIntoConstraints="NO" id="muH-4w-Q3U">
-                                                            <rect key="frame" x="15" y="10" width="60" height="79.5"/>
-                                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3hG-wu-Ejy">
+                                                            <rect key="frame" x="15" y="11" width="345" height="228"/>
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumb-no-image" translatesAutoresizingMaskIntoConstraints="NO" id="muH-4w-Q3U">
+                                                                    <rect key="frame" x="0.0" y="14" width="100" height="200"/>
+                                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="100" id="A2x-sd-71Y"/>
+                                                                        <constraint firstAttribute="height" constant="200" id="JuX-75-t6z"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thor: Ragnarok" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1Q-Qg-Fxx" userLabel="Nome">
+                                                                    <rect key="frame" x="100" y="102" width="245" height="24"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                    <color key="textColor" red="0.89444120667533489" green="0.92807774132384568" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="I1Q-Qg-Fxx" firstAttribute="centerY" secondItem="QTU-GX-029" secondAttribute="centerY" id="2wN-fT-KNg"/>
-                                                        <constraint firstItem="muH-4w-Q3U" firstAttribute="top" secondItem="QTU-GX-029" secondAttribute="top" constant="10" id="44t-Hx-mo7"/>
-                                                        <constraint firstItem="I1Q-Qg-Fxx" firstAttribute="leading" secondItem="muH-4w-Q3U" secondAttribute="trailing" constant="10" id="gIJ-Ck-JRq"/>
-                                                        <constraint firstItem="muH-4w-Q3U" firstAttribute="leading" secondItem="QTU-GX-029" secondAttribute="leading" constant="15" id="h8j-1F-MCZ"/>
-                                                        <constraint firstAttribute="trailing" secondItem="muH-4w-Q3U" secondAttribute="trailing" constant="300" id="kQ9-Yt-xbM"/>
-                                                        <constraint firstAttribute="bottom" secondItem="muH-4w-Q3U" secondAttribute="bottom" constant="10" id="zPZ-Yd-PMy"/>
+                                                        <constraint firstItem="3hG-wu-Ejy" firstAttribute="top" secondItem="QTU-GX-029" secondAttribute="topMargin" id="1yT-yH-8KD"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="3hG-wu-Ejy" secondAttribute="bottom" id="4uW-Ub-69s"/>
+                                                        <constraint firstItem="3hG-wu-Ejy" firstAttribute="leading" secondItem="QTU-GX-029" secondAttribute="leadingMargin" id="R1L-Ie-msS"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="3hG-wu-Ejy" secondAttribute="trailing" id="WGr-qg-Kk9"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" red="0.07659819162436543" green="0.07659819162436543" blue="0.07659819162436543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
