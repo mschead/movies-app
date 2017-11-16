@@ -8,7 +8,14 @@ import ReSwift
 
 struct MovieDetailState: StateType {
 
-    var name: String = ""
-    var thumb: UIImage = UIImage(named: "thumb-no-image")!
+    var thumbImage: UIImage = UIImage(named: "thumb-no-image")!
+
+    var nome: String = ""
+
+    var ano: String = ""
+
+    var genero: String = ""
+
+    var descricao: String = ""
 
 }

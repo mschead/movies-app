@@ -25,7 +25,9 @@ struct MovieDetailReducer: Reducer {
 
     func setMovie(state: MovieDetailState, movie: Movie) -> MovieDetailState {
         var state = state
-        state.name = movie.original_title
+        state.nome = movie.original_title
+        state.descricao = movie.overview
+        state.ano = movie.release_date
         return state
     }
 }
