@@ -4,3 +4,11 @@
 //
 
 import Foundation
+import ReSwift
+
+struct MovieDetailState: StateType {
+
+    var name: String = ""
+    var thumb: UIImage = UIImage(named: "thumb-no-image")!
+
+}

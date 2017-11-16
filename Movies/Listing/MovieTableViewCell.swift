@@ -12,9 +12,14 @@ import UIKit
 class MovieTableViewCell : UITableViewCell {
 
     @IBOutlet weak var nome: UILabel!
-    
-    func setFieldValue(movie: String) {
-        nome.text = movie
+    @IBOutlet weak var thumb: UIImageView!
+
+
+
+    func setFieldValue(movie: Movie) {
+        nome.text = movie.original_title
+        thumb.image = AppUtils.getImageFromURL(url: movie.poster_path)
+
     }
     
 }

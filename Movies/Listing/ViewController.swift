@@ -7,14 +7,15 @@
 //
 
 import UIKit
+import ReSwift
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, StoreSubscriber {
 
     typealias StoreSubscriberStateType = MoviesListingState
 
     @IBOutlet weak var movieTable: UITableView!
 
-    let movies = ["Homem Aranha", "Thor", "Matrix", "A Origem", "Homem de Ferro", "Interestellar"]
+    var movies: [Movie] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +37,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     func newState(state: MoviesListingState) {
-        print(state.movies)
+        movies = state.movies
+        movieTable.reloadData()
     }
 
     // METODOS TABELA: colocar em classe separada
@@ -45,12 +47,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return movies.count
     }
 
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-//        guard let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath) as? MovieTableViewCell else {
-//            fatalError("The dequeued cell is not an instance of MovieCell.")
-//        }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let _ = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath) as? MovieTableViewCell else {
+            fatalError("The dequeued cell is not an instance of MovieCell.")
+        }
 
-//        cell.nome.text
+        mainStore.dispatch(SetMovieAction(movie: movies[indexPath.row]))
 
     }
 
@@ -59,9 +61,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             fatalError("The dequeued cell is not an instance of MovieCell.")
         }
 
-        let row = indexPath.row
-        cell.nome.text = movies[row]
-
+        cell.setFieldValue(movie: movies[indexPath.row])
         return cell
     }
 

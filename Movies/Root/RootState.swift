@@ -11,6 +11,8 @@ import ReSwift
 
 struct RootState : StateType {
     
-    var moviesListingState = MoviesListingState()
-    
+    var moviesListingState: MoviesListingState = MoviesListingState()
+
+    var movieDetailState: MovieDetailState = MovieDetailState()
+
 }
