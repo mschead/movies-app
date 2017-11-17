@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		27AD91844DCC52B1B4452DF5 /* Pods_Movies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71E4E39EC037C11B1C4F7873 /* Pods_Movies.framework */; };
+		3DD3F7CD1FBE246900463B29 /* MovieDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD3F7CC1FBE246900463B29 /* MovieDetailService.swift */; };
 		3ECF733B9BCD771C7EA45899 /* MoviePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECF75E25062CF8C9B304EAC /* MoviePage.swift */; };
 		3ECF75AF54D688815E6EDB07 /* MoviesListingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECF767D794BCDC468AA181C /* MoviesListingService.swift */; };
 		4A6A5C351FBB16D300476B51 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6A5C341FBB16D300476B51 /* Movie.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3DD3F7CC1FBE246900463B29 /* MovieDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailService.swift; sourceTree = "<group>"; };
 		3ECF75E25062CF8C9B304EAC /* MoviePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviePage.swift; sourceTree = "<group>"; };
 		3ECF767D794BCDC468AA181C /* MoviesListingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesListingService.swift; sourceTree = "<group>"; };
 		4A6A5C341FBB16D300476B51 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				C9E134061CCF7297E419D575 /* MovieDetailAction.swift */,
 				C9E130F2C5B773BB6F299AEA /* MovieDetailReducer.swift */,
 				C9E139FABE5F73D8709EB0C9 /* MovieDetailState.swift */,
+				3DD3F7CC1FBE246900463B29 /* MovieDetailService.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				4A6A5C421FBB1CAA00476B51 /* MoviesListingState.swift in Sources */,
 				4A7B5DD11FB9F99300918CED /* MoviesListingAction.swift in Sources */,
 				4A6A5C381FBB1A3200476B51 /* RootState.swift in Sources */,
+				3DD3F7CD1FBE246900463B29 /* MovieDetailService.swift in Sources */,
 				C9E1337ED7CBB87E9B6417FB /* FilterAction.swift in Sources */,
 				C9E13DDD1540AF7177DD01C0 /* FilterReducer.swift in Sources */,
 				C9E13705A2244C8BC39D5EF4 /* FilterState.swift in Sources */,

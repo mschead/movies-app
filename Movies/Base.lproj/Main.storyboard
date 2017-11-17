@@ -144,10 +144,10 @@
             </objects>
             <point key="canvasLocation" x="360.80000000000001" y="32.833583208395808"/>
         </scene>
-        <!--View Controller-->
+        <!--Movie Detail View Controller-->
         <scene sceneID="dhP-pc-p7c">
             <objects>
-                <viewController id="wB8-vn-nml" sceneMemberID="viewController">
+                <viewController id="wB8-vn-nml" customClass="MovieDetailViewController" customModule="Movies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Bf-Zj-0xj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -162,8 +162,8 @@
                                         <rect key="frame" x="125" y="33" width="130" height="115"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVb-ie-glf">
-                                                <rect key="frame" x="0.0" y="0.0" width="48.5" height="21.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <color key="textColor" red="0.89444120670000005" green="0.92807774129999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -174,8 +174,8 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ano" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHH-FL-alE">
-                                                <rect key="frame" x="0.0" y="38" width="32" height="21.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <rect key="frame" x="0.0" y="38" width="34.5" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <color key="textColor" red="0.89444120670000005" green="0.92807774129999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -186,8 +186,8 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gênero" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppZ-7R-Xws">
-                                                <rect key="frame" x="0.0" y="76.5" width="59.5" height="21.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <rect key="frame" x="0.0" y="76.5" width="63" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <color key="textColor" red="0.98014707950000002" green="1" blue="0.99237202329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -215,14 +215,14 @@
                                 <rect key="frame" x="47" y="201" width="300" height="387"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descrição" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gN6-yN-IjM">
-                                        <rect key="frame" x="20" y="20" width="94" height="21"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="21.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <color key="textColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soA-XI-Ldk">
-                                        <rect key="frame" x="20" y="56" width="260" height="317"/>
+                                        <rect key="frame" x="0.0" y="56" width="300" height="317"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <string key="text">Caros amigos, a competitividade nas transações comerciais cumpre um papel essencial na formulação do investimento em reciclagem técnica. No entanto, não podemos esquecer que a adoção de políticas descentralizadoras nos obriga à análise das diretrizes de desenvolvimento para o futuro. Assim mesmo, o consenso sobre a necessidade de qualificação talvez venha a ressaltar a relatividade do levantamento das variáveis envolvidas.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -245,6 +245,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Vi8-kI-XLF"/>
                     </view>
+                    <connections>
+                        <outlet property="anoLabel" destination="HAo-MO-A9n" id="gBM-xe-2UJ"/>
+                        <outlet property="descricaoLabel" destination="soA-XI-Ldk" id="sPN-il-yGV"/>
+                        <outlet property="generoLabel" destination="oEi-Zh-r8K" id="c9W-UQ-NJe"/>
+                        <outlet property="nomeLabel" destination="2ao-Pn-Mh3" id="rou-Iu-z9i"/>
+                        <outlet property="thumbImageView" destination="3Hd-1z-laT" id="wRI-WY-wJ4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cP8-Ik-MRJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

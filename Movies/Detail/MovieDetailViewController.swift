@@ -10,11 +10,14 @@ import UIKit
 import ReSwift
 
 class MovieDetailViewController: UIViewController, StoreSubscriber{
-    
-    @IBOutlet weak var name: UILabel!
-    
     typealias StoreSubscriberStateType = MovieDetailState
-
+    
+    @IBOutlet weak var thumbImageView: UIImageView!
+    @IBOutlet weak var nomeLabel: UILabel!
+    @IBOutlet weak var anoLabel: UILabel!
+    @IBOutlet weak var generoLabel: UILabel!
+    @IBOutlet weak var descricaoLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +25,10 @@ class MovieDetailViewController: UIViewController, StoreSubscriber{
     }
 
     func newState(state: MovieDetailState) {
-        name.text = state.name
+        thumbImageView.image = state.thumbImage
+        nomeLabel.text = state.nome
+        anoLabel.text = state.ano
+        generoLabel.text = state.genero
+        descricaoLabel.text = state.descricao
     }
 }
