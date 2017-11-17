@@ -40,14 +40,22 @@ struct MoviesListingReducer: Reducer {
     func toggleSearchBar(state: MoviesListingState) -> MoviesListingState {
         var state = state
         state.isSearchBarHidden = !state.isSearchBarHidden
+        if state.isSearchBarHidden {
+            state.filteredMovies = state.movies
+        }
         return state
     }
 
     func filterBySearch(state: MoviesListingState, action: FilterBySearchAction) -> MoviesListingState {
         var state = state
-        state.filteredMovies = state.movies.filter { movie in
-            return movie.title.range(of: action.searchParam) != nil
+        if action.searchParam.isEmpty {
+            state.filteredMovies = state.movies
+        } else {
+            state.filteredMovies = state.movies.filter { movie in
+                return movie.title.range(of: action.searchParam) != nil
+            }
         }
+
         return state
     }
 }
