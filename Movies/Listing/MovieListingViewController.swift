@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MovieListingViewController.swift
 //  Movies
 //
 //  Created by Marcos Schead on 13/11/17.
@@ -9,7 +9,7 @@
 import UIKit
 import ReSwift
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, StoreSubscriber, UISearchBarDelegate {
+class MovieListingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, StoreSubscriber, UISearchBarDelegate {
 
     typealias StoreSubscriberStateType = MoviesListingState
 
