@@ -51,11 +51,11 @@ class MovieListingViewController: UIViewController, UITableViewDataSource, UITab
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let _ = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath) as? MovieTableViewCell else {
+        guard let cell = tableView.cellForRow(at: indexPath) as? MovieTableViewCell else {
             fatalError("The dequeued cell is not an instance of MovieCell.")
         }
 
-        mainStore.dispatch(SetMovieAction(movie: movies[indexPath.row]))
+        mainStore.dispatch(SetMovieAction(movie: movies[indexPath.row], poster: cell.thumb.image!))
 
     }
 

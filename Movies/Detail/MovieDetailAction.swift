@@ -5,15 +5,18 @@
 
 import Foundation
 import ReSwift
+import UIKit
 
 struct SetMovieAction : StandardActionConvertible {
 
     static let type: String = "SET_MOVIE_ACTION"
 
     var movie: Movie
+    var poster: UIImage
 
-    init(movie: Movie) {
+    init(movie: Movie, poster: UIImage) {
         self.movie = movie
+        self.poster = poster
     }
 
     init(_ standardAction: StandardAction) {

@@ -14,8 +14,10 @@ struct MovieDetailState: StateType {
 
     var ano: String = ""
 
-    var genero: String = ""
+    var generos: String = ""
 
     var descricao: String = ""
+
+    var genresId: [Int] = []
 
 }

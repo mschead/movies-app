@@ -9,7 +9,7 @@
 import UIKit
 import ReSwift
 
-class MovieDetailViewController: UIViewController, StoreSubscriber{
+class MovieDetailViewController: UIViewController, StoreSubscriber {
     typealias StoreSubscriberStateType = MovieDetailState
     
     @IBOutlet weak var thumbImageView: UIImageView!
@@ -21,6 +21,16 @@ class MovieDetailViewController: UIViewController, StoreSubscriber{
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        MovieDetailService().getGenres(page: 1) { (result) in
+            switch result {
+            case .success(let genres):
+                let result = self.getMovieGenresNames(genreMovieIds: mainStore.state.movieDetailState.genresId, allGenres: genres).joined(separator: ", ")
+                mainStore.dispatch(SetMovieGenresAction(genres: result))
+            case .failure(let error):
+                fatalError("error: \(error.localizedDescription)")
+            }
+        }
+
         mainStore.subscribe(self, selector: { $0.movieDetailState })
     }
 
@@ -28,7 +38,17 @@ class MovieDetailViewController: UIViewController, StoreSubscriber{
         thumbImageView.image = state.thumbImage
         nomeLabel.text = state.nome
         anoLabel.text = state.ano
-        generoLabel.text = state.genero
+        generoLabel.text = state.generos
         descricaoLabel.text = state.descricao
     }
+
+    fileprivate func getMovieGenresNames(genreMovieIds: [Int], allGenres: [Genre]) -> [String] {
+        return allGenres.filter { genre in
+            genreMovieIds.contains(genre.id)
+        }.map { genre in
+            return genre.name
+        }
+    }
+
+
 }

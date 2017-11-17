@@ -29,6 +29,26 @@ struct SetMovieListAction : StandardActionConvertible {
 
 }
 
+struct SetMovieGenresAction: StandardActionConvertible {
+
+    static let type: String = "SET_MOVIE_GENRES_ACTION"
+
+    let genres: String
+
+    init(genres: String) {
+        self.genres = genres
+    }
+
+    init(_ standardAction: StandardAction) {
+        self.init(standardAction)
+    }
+
+    func toStandardAction() -> StandardAction {
+        return StandardAction(type: SetMovieGenresAction.type, payload: [:], isTypedAction: true)
+    }
+
+}
+
 struct ToggleSearchBarAction: StandardActionConvertible {
 
     static let type: String = "TOGGLE_SEARCH_BAR_ACTION"
