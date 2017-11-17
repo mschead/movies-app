@@ -27,6 +27,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             switch result {
             case .success(let moviePage):
                 mainStore.dispatch(SetMovieListAction(moviePage.results))
+
             case .failure(let error):
                 fatalError("error: \(error.localizedDescription)")
             }
@@ -63,7 +64,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             fatalError("The dequeued cell is not an instance of MovieCell.")
         }
 
-        cell.setFieldValue(movie: movies[indexPath.row])
+        cell.setFieldValue(movie: self.movies[indexPath.row])
+
         return cell
     }
 

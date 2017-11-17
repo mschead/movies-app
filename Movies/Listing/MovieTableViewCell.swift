@@ -14,12 +14,9 @@ class MovieTableViewCell : UITableViewCell {
     @IBOutlet weak var nome: UILabel!
     @IBOutlet weak var thumb: UIImageView!
 
-
-
     func setFieldValue(movie: Movie) {
         nome.text = movie.original_title
-        thumb.image = AppUtils.getImageFromURL(url: movie.poster_path)
-
+        thumb.downloadImageFrom(link: movie.poster_path, contentMode: UIViewContentMode.redraw)
     }
     
 }

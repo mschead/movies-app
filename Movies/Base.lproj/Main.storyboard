@@ -63,7 +63,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="249.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3hG-wu-Ejy">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3hG-wu-Ejy">
                                                             <rect key="frame" x="15" y="11" width="345" height="228"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumb-no-image" translatesAutoresizingMaskIntoConstraints="NO" id="muH-4w-Q3U">
@@ -74,8 +74,8 @@
                                                                         <constraint firstAttribute="height" constant="200" id="JuX-75-t6z"/>
                                                                     </constraints>
                                                                 </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thor: Ragnarok" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1Q-Qg-Fxx" userLabel="Nome">
-                                                                    <rect key="frame" x="100" y="102" width="245" height="24"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thor: Ragnarok" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1Q-Qg-Fxx" userLabel="Nome">
+                                                                    <rect key="frame" x="110" y="102" width="235" height="24"/>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                                     <color key="textColor" red="0.89444120667533489" green="0.92807774132384568" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -153,13 +153,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QUt-3W-BSn">
-                                <rect key="frame" x="67" y="16" width="260" height="180"/>
+                                <rect key="frame" x="45" y="16" width="282" height="180"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumb-no-image" translatesAutoresizingMaskIntoConstraints="NO" id="3Hd-1z-laT">
-                                        <rect key="frame" x="8" y="5" width="102" height="170"/>
+                                        <rect key="frame" x="0.0" y="5" width="112" height="170"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="YMD-gh-SOc">
-                                        <rect key="frame" x="125" y="33" width="130" height="115"/>
+                                        <rect key="frame" x="127" y="33" width="150" height="115"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVb-ie-glf">
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="21.5"/>
@@ -202,8 +202,8 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="YMD-gh-SOc" firstAttribute="leading" secondItem="3Hd-1z-laT" secondAttribute="trailing" constant="15" id="2We-Yy-B0F"/>
-                                    <constraint firstItem="3Hd-1z-laT" firstAttribute="leading" secondItem="QUt-3W-BSn" secondAttribute="leading" constant="8" id="A6Y-Co-mvK"/>
-                                    <constraint firstAttribute="trailing" secondItem="3Hd-1z-laT" secondAttribute="trailing" constant="150" id="Em7-sX-8Ub"/>
+                                    <constraint firstItem="3Hd-1z-laT" firstAttribute="leading" secondItem="QUt-3W-BSn" secondAttribute="leading" id="A6Y-Co-mvK"/>
+                                    <constraint firstAttribute="trailing" secondItem="3Hd-1z-laT" secondAttribute="trailing" constant="170" id="Em7-sX-8Ub"/>
                                     <constraint firstAttribute="bottom" secondItem="3Hd-1z-laT" secondAttribute="bottom" constant="5" id="RAm-I3-IXq"/>
                                     <constraint firstItem="3Hd-1z-laT" firstAttribute="top" secondItem="QUt-3W-BSn" secondAttribute="top" constant="5" id="SdV-Gh-zTK"/>
                                     <constraint firstAttribute="bottom" secondItem="YMD-gh-SOc" secondAttribute="bottom" constant="32" id="Tdc-ix-Crz"/>
@@ -212,7 +212,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ekw-lh-OgA">
-                                <rect key="frame" x="47" y="201" width="300" height="387"/>
+                                <rect key="frame" x="45" y="201" width="302" height="387"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descrição" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gN6-yN-IjM">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="21.5"/>
@@ -222,7 +222,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soA-XI-Ldk">
-                                        <rect key="frame" x="0.0" y="56" width="300" height="317"/>
+                                        <rect key="frame" x="0.0" y="8" width="300" height="317"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <string key="text">Caros amigos, a competitividade nas transações comerciais cumpre um papel essencial na formulação do investimento em reciclagem técnica. No entanto, não podemos esquecer que a adoção de políticas descentralizadoras nos obriga à análise das diretrizes de desenvolvimento para o futuro. Assim mesmo, o consenso sobre a necessidade de qualificação talvez venha a ressaltar a relatividade do levantamento das variáveis envolvidas.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -235,8 +235,8 @@
                         <color key="backgroundColor" red="0.078417681157588959" green="0.078439243137836456" blue="0.078416295349597931" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="QUt-3W-BSn" firstAttribute="top" secondItem="Vi8-kI-XLF" secondAttribute="top" constant="16" id="BfP-c4-iH9"/>
-                            <constraint firstItem="QUt-3W-BSn" firstAttribute="leading" secondItem="Vi8-kI-XLF" secondAttribute="leading" constant="67" id="Fa3-MD-Gpr"/>
-                            <constraint firstItem="ekw-lh-OgA" firstAttribute="leading" secondItem="Vi8-kI-XLF" secondAttribute="leading" constant="47" id="Fbm-Z4-GDH"/>
+                            <constraint firstItem="QUt-3W-BSn" firstAttribute="leading" secondItem="Vi8-kI-XLF" secondAttribute="leading" constant="45" id="Fa3-MD-Gpr"/>
+                            <constraint firstItem="ekw-lh-OgA" firstAttribute="leading" secondItem="Vi8-kI-XLF" secondAttribute="leading" constant="45" id="Fbm-Z4-GDH"/>
                             <constraint firstItem="Vi8-kI-XLF" firstAttribute="bottom" secondItem="ekw-lh-OgA" secondAttribute="bottom" constant="15" id="Hq4-ma-W39"/>
                             <constraint firstItem="ekw-lh-OgA" firstAttribute="top" secondItem="QUt-3W-BSn" secondAttribute="bottom" constant="5" id="PPk-ZG-L90"/>
                             <constraint firstItem="Vi8-kI-XLF" firstAttribute="bottom" secondItem="QUt-3W-BSn" secondAttribute="bottom" constant="407" id="SII-Yo-Ah4"/>
