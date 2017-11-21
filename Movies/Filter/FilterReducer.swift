@@ -4,3 +4,20 @@
 //
 
 import Foundation
+import ReSwift
+
+struct FilterReducer: Reducer {
+
+    typealias ReducerStateType = FilterState
+
+    func handleAction(action: Action, state: FilterState?) -> FilterState {
+//        if state == nil {
+            return FilterState()
+//        }
+        
+//        return
+    }
+
+//    fileprivate applyFilter
+
+}

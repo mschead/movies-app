@@ -15,4 +15,6 @@ struct RootState : StateType {
 
     var movieDetailState: MovieDetailState = MovieDetailState()
 
+    var filterState: FilterState = FilterState()
+
 }

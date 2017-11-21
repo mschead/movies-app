@@ -81,3 +81,42 @@ struct FilterBySearchAction: StandardActionConvertible {
         return StandardAction(type: FilterBySearchAction.type, payload: [:], isTypedAction: true)
     }
 }
+
+struct ApplyFilterAction : StandardActionConvertible {
+
+    static let type: String = "APPLY_FILTER_ACTION"
+
+    var year: String
+    var movies: [Movie]
+
+    init(_ year: String, _ movies: [Movie]) {
+        self.year = year
+        self.movies = movies
+    }
+
+    init(_ standardAction: StandardAction) {
+        self.init(standardAction)
+    }
+
+    func toStandardAction() -> StandardAction {
+        return StandardAction(type: SetMovieListAction.type, payload: [:], isTypedAction: true)
+    }
+
+}
+
+struct ClearFilterAction : StandardActionConvertible {
+
+    static let type: String = "CLEAR_FILTER_ACTION"
+
+    init() {
+    }
+
+    init(_ standardAction: StandardAction) {
+        self.init(standardAction)
+    }
+
+    func toStandardAction() -> StandardAction {
+        return StandardAction(type: SetMovieListAction.type, payload: [:], isTypedAction: true)
+    }
+
+}

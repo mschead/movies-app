@@ -4,3 +4,10 @@
 //
 
 import Foundation
+import ReSwift
+
+struct FilterState : StateType {
+
+    var year: String = "2017"
+
+}

@@ -17,20 +17,49 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Filter View Controller-->
+        <!--Filter-->
         <scene sceneID="Gjn-f8-vB5">
             <objects>
                 <viewController id="Hb6-a1-rBh" customClass="FilterViewController" customModule="Movies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fQK-Ab-8jd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJ0-Em-G9f">
+                                <rect key="frame" x="167" y="32" width="42" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yN1-xj-9uF">
+                                <rect key="frame" x="16" y="66" width="343" height="216"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lJ0-Em-G9f" firstAttribute="top" secondItem="uoi-aK-Un9" secondAttribute="top" constant="32" id="7Rp-U8-d5g"/>
+                            <constraint firstItem="lJ0-Em-G9f" firstAttribute="centerX" secondItem="uoi-aK-Un9" secondAttribute="centerX" id="Jqj-ia-JzT"/>
+                            <constraint firstItem="uoi-aK-Un9" firstAttribute="trailing" secondItem="yN1-xj-9uF" secondAttribute="trailing" constant="16" id="efu-gZ-mF9"/>
+                            <constraint firstItem="yN1-xj-9uF" firstAttribute="top" secondItem="lJ0-Em-G9f" secondAttribute="bottom" constant="10" id="etm-TI-0Wc"/>
+                            <constraint firstItem="yN1-xj-9uF" firstAttribute="leading" secondItem="uoi-aK-Un9" secondAttribute="leading" constant="16" id="isl-D9-gNi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="uoi-aK-Un9"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Filter" id="ifV-et-o1a">
+                        <barButtonItem key="rightBarButtonItem" title="Apply" id="Sq2-2P-8jq">
+                            <connections>
+                                <action selector="applyFilter:" destination="Hb6-a1-rBh" id="Iek-LM-wXe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="yearPicker" destination="yN1-xj-9uF" id="GX9-AJ-ofh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jPa-Vm-mXz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1270" y="-426"/>
+            <point key="canvasLocation" x="1269.5999999999999" y="-426.83658170914543"/>
         </scene>
         <!--Movie Listing View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -60,7 +89,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="375" height="250"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="egS-wq-ckw" id="QTU-GX-029">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="249.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3hG-wu-Ejy">
@@ -90,7 +119,7 @@
                                                         <constraint firstAttribute="trailingMargin" secondItem="3hG-wu-Ejy" secondAttribute="trailing" id="WGr-qg-Kk9"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
-                                                <color key="backgroundColor" red="0.07659819162436543" green="0.07659819162436543" blue="0.07659819162436543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <outlet property="nome" destination="I1Q-Qg-Fxx" id="2t2-AI-fy8"/>
                                                     <outlet property="thumb" destination="muH-4w-Q3U" id="xgH-2N-vsm"/>
@@ -112,19 +141,17 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="i3X-4s-faY">
+                        <barButtonItem key="leftBarButtonItem" title="Clear" id="fve-eU-APZ">
+                            <color key="tintColor" red="0.99019607840000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="clearFilter:" destination="BYZ-38-t0r" id="XMj-PO-wB3"/>
+                            </connections>
+                        </barButtonItem>
                         <rightBarButtonItems>
-                            <barButtonItem title="Item" style="plain" id="3k3-v4-NwP">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Vrt-hy-Igr">
-                                    <rect key="frame" x="313" y="7" width="46" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="tintColor" red="0.21021862277834025" green="0.407327796573139" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <state key="normal" title="Filter">
-                                        <color key="titleColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </state>
-                                </button>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <barButtonItem title="Filter" id="wIq-yE-9mo">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="Hb6-a1-rBh" kind="show" id="9Cv-A0-D7W"/>
+                                    <segue destination="Hb6-a1-rBh" kind="show" id="B3q-uG-s9s"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="search" id="WSW-Iv-KwG">

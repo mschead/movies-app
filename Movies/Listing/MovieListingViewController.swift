@@ -36,7 +36,10 @@ class MovieListingViewController: UIViewController, UITableViewDataSource, UITab
         movieTable.delegate = self
         movieTable.dataSource = self
         searchBar.delegate = self
+
+        movieTable.tableFooterView = UIView()
     }
+
 
     func newState(state: MoviesListingState) {
         searchBar.isHidden = state.isSearchBarHidden
@@ -44,8 +47,23 @@ class MovieListingViewController: UIViewController, UITableViewDataSource, UITab
         movieTable.reloadData()
     }
 
-    // METODOS TABELA: colocar em classe separada
 
+    @IBAction func searchButtonClicked(_ sender: UIBarButtonItem) {
+        mainStore.dispatch(ToggleSearchBarAction())
+    }
+
+    @IBAction func clearFilter(_ sender: Any) {
+        mainStore.dispatch(ClearFilterAction())
+    }
+
+
+    /* SEARCHBAR METHOD - DELEGATE */
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        mainStore.dispatch(FilterBySearchAction(searchParam: searchBar.text ?? ""))
+    }
+
+
+    /* TABLEVIEW METHODS - DELEGATE AND DATASOURCE */
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return movies.count
     }
@@ -56,7 +74,6 @@ class MovieListingViewController: UIViewController, UITableViewDataSource, UITab
         }
 
         mainStore.dispatch(SetMovieAction(movie: movies[indexPath.row], poster: cell.thumb.image!))
-
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -76,13 +93,6 @@ class MovieListingViewController: UIViewController, UITableViewDataSource, UITab
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
-    
-    @IBAction func searchButtonClicked(_ sender: UIBarButtonItem) {
-        mainStore.dispatch(ToggleSearchBarAction())
-    }
 
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        mainStore.dispatch(FilterBySearchAction(searchParam: searchBar.text ?? ""))
-    }
 }
 

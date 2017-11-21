@@ -15,6 +15,7 @@ struct RootReducer : Reducer {
     
     let moviesListingReducer = MoviesListingReducer()
     let movieDetailReducer = MovieDetailReducer()
+    let filterReducer = FilterReducer()
     
     func handleAction(action: Action, state: RootState?) -> RootState {
         if state == nil {
@@ -26,8 +27,9 @@ struct RootReducer : Reducer {
     func handleDefaultAction(action: Action, state: RootState?) -> RootState {
         let moviesListingState: MoviesListingState = moviesListingReducer.handleAction(action: action, state: state?.moviesListingState)
         let movieDetailState: MovieDetailState = movieDetailReducer.handleAction(action: action, state: state?.movieDetailState)
+        let filterState: FilterState = filterReducer.handleAction(action: action, state: state?.filterState)
 
-        return RootState(moviesListingState: moviesListingState, movieDetailState: movieDetailState)
+        return RootState(moviesListingState: moviesListingState, movieDetailState: movieDetailState, filterState: filterState)
     }
     
 }

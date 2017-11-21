@@ -24,6 +24,10 @@ struct MoviesListingReducer: Reducer {
             return toggleSearchBar(state: state!)
         case let action as FilterBySearchAction:
             return filterBySearch(state: state!, action: action)
+        case let action as ApplyFilterAction:
+            return filterByYear(state: state!, action: action)
+        case let action as ClearFilterAction:
+            return clearFilter(state: state!, action: action)
         default:
             return state!
         }
@@ -58,4 +62,25 @@ struct MoviesListingReducer: Reducer {
 
         return state
     }
+
+    func filterByYear(state: MoviesListingState, action: ApplyFilterAction) -> MoviesListingState {
+        var state = state
+
+        if action.year.isEmpty {
+            state.filteredMovies = state.movies
+        } else {
+            state.filteredMovies = action.movies.filter {movie in
+                return movie.release_date.range(of: action.year) != nil
+            }
+        }
+
+        return state
+    }
+
+    func clearFilter(state: MoviesListingState, action: ClearFilterAction) -> MoviesListingState {
+        var state = state
+        state.filteredMovies = state.movies
+        return state
+    }
+
 }
