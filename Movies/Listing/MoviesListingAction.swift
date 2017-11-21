@@ -87,11 +87,9 @@ struct ApplyFilterAction : StandardActionConvertible {
     static let type: String = "APPLY_FILTER_ACTION"
 
     var year: String
-    var movies: [Movie]
 
-    init(_ year: String, _ movies: [Movie]) {
+    init(year: String) {
         self.year = year
-        self.movies = movies
     }
 
     init(_ standardAction: StandardAction) {

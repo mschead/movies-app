@@ -29,4 +29,8 @@ post_install do |installer|
   end
 end
 
+target :MoviesTests do
+  pod 'ReSwift', '~> 3.0'
+end
+
 end

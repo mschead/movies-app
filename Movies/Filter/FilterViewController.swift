@@ -39,7 +39,8 @@ class FilterViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 
 
     @IBAction func applyFilter(_ sender: UIBarButtonItem) {
-        mainStore.dispatch(ApplyFilterAction(year, mainStore.state.moviesListingState.movies))
+        let action = ApplyFilterAction(year: year)
+        mainStore.dispatch(action)
         self.navigationController?.popViewController(animated: true)
     }
 

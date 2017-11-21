@@ -69,7 +69,7 @@ struct MoviesListingReducer: Reducer {
         if action.year.isEmpty {
             state.filteredMovies = state.movies
         } else {
-            state.filteredMovies = action.movies.filter {movie in
+            state.filteredMovies = state.movies.filter {movie in
                 return movie.release_date.range(of: action.year) != nil
             }
         }
