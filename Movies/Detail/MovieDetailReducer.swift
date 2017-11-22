@@ -29,7 +29,7 @@ struct MovieDetailReducer: Reducer {
         var state = state
         state.nome = movie.original_title
         state.descricao = movie.overview
-        state.ano = movie.release_date
+        state.ano = fetchAno(fulldate: movie.release_date)
         state.thumbImage = image
         state.genresId = movie.genre_ids
         return state
@@ -41,5 +41,8 @@ struct MovieDetailReducer: Reducer {
         return state
     }
 
-
+    func fetchAno(fulldate: String) -> String {
+        let index = fulldate.index(fulldate.startIndex, offsetBy: 4)
+        return String(fulldate[..<index])
+    }
 }

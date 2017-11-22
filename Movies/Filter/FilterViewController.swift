@@ -23,7 +23,7 @@ class FilterViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         super.viewDidLoad()
         generateYearsArray()
         year = years[0]
-        
+
         yearPicker.delegate = self
         yearPicker.dataSource = self
 
@@ -33,14 +33,14 @@ class FilterViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 
     func newState(state: FilterState) {
         if let index = years.index(of: state.year) {
+            year = state.year
             yearPicker.selectRow(index, inComponent: 0, animated: true)
         }
     }
 
 
     @IBAction func applyFilter(_ sender: UIBarButtonItem) {
-        let action = ApplyFilterAction(year: year)
-        mainStore.dispatch(action)
+        mainStore.dispatch(ApplyFilterAction(year: year))
         self.navigationController?.popViewController(animated: true)
     }
 
@@ -66,6 +66,7 @@ class FilterViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         year = years[row]
+        mainStore.dispatch(SetYearFiltroAction(year: year))
     }
 
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
