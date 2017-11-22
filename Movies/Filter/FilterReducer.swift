@@ -11,13 +11,22 @@ struct FilterReducer: Reducer {
     typealias ReducerStateType = FilterState
 
     func handleAction(action: Action, state: FilterState?) -> FilterState {
-//        if state == nil {
+        if state == nil {
             return FilterState()
-//        }
-        
-//        return
+        }
+
+        switch action {
+            case let action as SetYearFiltroAction:
+                return setarAnoFiltro(state: state!, action: action)
+            default:
+                return state!
+        }
+
     }
 
-//    fileprivate applyFilter
-
+    func setarAnoFiltro(state: FilterState, action: SetYearFiltroAction) -> FilterState {
+        var state = state
+        state.year = action.year
+        return state
+    }
 }
